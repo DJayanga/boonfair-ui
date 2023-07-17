@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
+import { ReactNode } from 'react';
+import { Layout } from 'antd';
+import { Sidebarlayout } from './components/Sidebar/Sidebarlayout';
 import './App.css';
+import { CommentLayout } from './components/CommentLayout/CommentLayout';
 
 function App() {
+  const { Content, Sider } = Layout;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout style={{ minHeight: '100vh' }}>
+      <Content style={{ background: "#f2f6fc", padding: '30px 30px' }}>
+        <Layout style={{ background: "#f2f6fc", height: 'auto' }} >
+          <Sider style={{ background: "#ffffff", marginRight: "20px", padding: '10px' }} width={350}>
+            <Sidebarlayout />
+          </Sider>
+          <Content style={{ background: "#ffffff",  padding: '15px' }}>
+            <CommentLayout />
+          </Content>
+        </Layout>
+      </Content>
+    </Layout>
   );
 }
 
 export default App;
+
+type LayoutProps = {
+  children: ReactNode;
+};

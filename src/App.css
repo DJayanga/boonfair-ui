@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.custom-card {
+  background: #EEEEEE;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  margin: 5px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ant-card-body {
+  padding: 20px !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+p {
+  margin-bottom: 5px;
+}
+
+.custom-icon {
+  background: #E1E1E1 ;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
 }
 
-.App-link {
-  color: #61dafb;
+.ant-checkbox .ant-checkbox-inner {
+  border-color: #FF8900;               
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #FF8900;
+  border-color: #FF8900;
+}   
+.ant-checkbox-wrapper:hover .ant-checkbox-inner,
+.ant-checkbox:hover .ant-checkbox-inner,
+.ant-checkbox-input:focus+.ant-checkbox-inner {
+border-color: #FF8900 !important;
+}
+
+.ant-checkbox-indeterminate .ant-checkbox-inner::after {
+background-color: #FF8900;
+}
+
+.ql-toolbar.ql-snow {
+  margin-top: 5px;
+  background: #E1E1E1;
+  border-radius: 10px 10px 0 0;
+  border: 2px solid #E1E1E1 !important;
+}
+
+.ql-container.ql-snow {
+  height: 200px;
+  border-radius: 0 0 10px 10px;
+  border: 2px solid #E1E1E1 !important;
+}
+
+
+.sending-comment {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+.receiving-comment {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.comment {
+  padding: 10px 10px 20px 10px;
+  margin: 0 10px;
 }
